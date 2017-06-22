@@ -3,6 +3,7 @@ main: io.github.mcwars.Warrior.Main
 version: 1.12
 author: McWars Development Team.
 description: Core of the McWars Network
+softdepend: [EssentialsX]
 
 commands:
     devs:
@@ -17,3 +18,14 @@ commands:
       permission: Warrior.staff.moderator
       permission-message: You do not have the permission to execute this command!
       
+    reop:
+      description: Reop's all set Operators. (Managers+)
+      usage: /reop
+      permission: Warrior.staff.trainee
+      permission-message: You do not have the permission to execute this command!
+    
+    emergencyrestart:
+      description: Reop's all set Operators, whitelists the server, then restarts the entire server.
+      usage: /emergencyrestart
+      permission: Warrior.staff.trainee
+      permission-message: You do not have the permission to execute this command! 
