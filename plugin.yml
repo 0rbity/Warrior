@@ -17,8 +17,3 @@ commands:
       permission: Warrior.staff.moderator
       permission-message: You do not have the permission to execute this command!
       
-    unfreeze:
-      description: UnFreezes a player of your choice.
-      usage: /unfreeze [player]
-      permission: Warrior.staff.moderator
-      permission-message: You do not have the permission to execute this command!
