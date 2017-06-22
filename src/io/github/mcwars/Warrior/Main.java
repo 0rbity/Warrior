@@ -29,7 +29,64 @@ public boolean onCommand(CommandSender sender, Command cmd, String label, String
 		// Lists Warrior devs. You rock!
 		sender.sendMessage(ChatColor.GOLD + "Warrior Developers: " + ChatColor.DARK_RED + "RainDropInMC, Whimpers, Orbity, AtomicRift, OrganicCuber.");
 	}
+		// Calls the player
+	Player player = (Player)sender;
+	if(cmd.getName().equalsIgnoreCase("unfreeze"))
+	{
+		// Checks if no IGN is named in the command at time of execution.
+		if(args.length == 0)
+		{
+			// Sends a message if no one is named.
+			player.sendMessage(ChatColor.GOLD + "Warrior> " + ChatColor.RED + "Please specify the Player's IGN you want to unfreeze.");
+		}
+		// Targets the Player.
+		Player target = getServer().getPlayer(args[0]);
+		// Checks if there is 1 argument (The Player)
+		if(args.length == 1)
+		{
+			// This occurs if the Player happens to not exist or is not online at the time of execution
+			if(target == null)
+			{
+			player.sendMessage(ChatColor.GOLD + "Warrior> " + ChatColor.RED + "That user does not exist or is not online at this time.");
+			return false;
+			// If that person is online...
+			} else
+			{
+				// This executes if the IGN is already in the list
+				if(PlayerList.contains(target.getName()))
+				{
+					// Removes the player.
+					PlayerList.remove(target.getName());
+					// If (s)he is not in the list...
+				} else
+				{
+					//Adds their name into the frozen list
+					PlayerList.add(target.getName());
+				}
+			}
+		}
+	}
 	
+	
+	return false;
+}
+
+// Tells that there is an event here
+	@EventHandler
+	// Method for the player movement
+	public void onPlayerMove(PlayerMoveEvent e)
+	{
+		//calls the player
+		Player player = e.getPlayer();
+		// Checks if the IGN is in the list
+		if(PlayerList.contains(player.getName()))
+		{
+			//Cancels the movement of the player
+			e.setCancelled(false);
+			// Sends the player frozen a message
+			player.sendMessage(ChatColor.GOLD + "Warrior> " + ChatColor.RED + "You have been UnFrozen!");
+		}
+	}
 	// Calls the player
 	Player player = (Player)sender;
 	if(cmd.getName().equalsIgnoreCase("freeze"))
