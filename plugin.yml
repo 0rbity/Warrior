@@ -1,7 +1,7 @@
 name: Warrior
 main: io.github.mcwars.Warrior.Main
 version: 1.12
-author: McWars Development Team.
+author: McWars Development Team. (RainDropInMC, Whimpers, AtomicRift, FactoDoesStuff)
 description: Core of the McWars Network
 
 commands:
@@ -14,5 +14,11 @@ commands:
     freeze:
       description: Freezes a player of your choice.
       usage: /freeze [player]
+      permission: Warrior.staff.moderator
+      permission-message: You do not have the permission to execute this command!
+      
+    unfreeze:
+      description: UnFreezes a player of your choice.
+      usage: /unfreeze [player]
       permission: Warrior.staff.moderator
       permission-message: You do not have the permission to execute this command!
