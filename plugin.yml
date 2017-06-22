@@ -1,0 +1,18 @@
+name: Warrior
+main: io.github.mcwars.Warrior.Main
+version: 1.12
+author: McWars Development Team.
+description: Core of the McWars Network
+
+commands:
+    devs:
+      description: Lists the developers of Warrior.
+      usage: /devs
+      permission: Warrior.default
+      permission-message: You do not have the permission to execute this command!
+      
+    freeze:
+      description: Freezes a player of your choice.
+      usage: /freeze [player]
+      permission: Warrior.staff.moderator
+      permission-message: You do not have the permission to execute this command!
