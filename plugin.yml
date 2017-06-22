@@ -1,0 +1,12 @@
+name: Warrior
+version: 1.12
+main: me.kryptocrash.WarriorCoreMcWARS
+author: Whimpers/KryptoCrash/Eric
+description: Main Plugin of McWars!
+
+commands:
+
+test:
+
+usage:/<command>
+description: a test command?
