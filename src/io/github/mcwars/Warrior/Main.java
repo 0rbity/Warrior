@@ -176,7 +176,7 @@ public boolean onCommand(CommandSender sender, Command cmd, String label, String
 	@EventHandler(priority = EventPriority.HIGHEST)
 	public void onCommandPreprocess(PlayerCommandPreprocessEvent e, CommandSender sender, Command cmd, String label, String[] args) {
 	              if (e.getMessage().equalsIgnoreCase("/plugins")) {
-	            	  sender.sendMessage(ChatColor.WHITE + "Plugins (1): " + ChatColor.GREEN + "Warrior");
+	            	  sender.sendMessage(ChatColor.WHITE + "Plugins (1): " + ChatColor.GREEN + "Warrior" + ChatColor.WHITE + ", " + ChatColor.GREEN + "StaffCore");
 	                }
 	}	
 	
