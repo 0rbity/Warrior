@@ -1,7 +1,7 @@
 name: Warrior
 main: io.github.mcwars.Warrior.Main
 version: 1.12
-author: McWars Development Team. (RainDropInMC, Whimpers, AtomicRift, FactoDoesStuff)
+author: McWars Development Team.
 description: Core of the McWars Network
 
 commands:
